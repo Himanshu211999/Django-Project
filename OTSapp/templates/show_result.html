@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block tittle %}
+Test Result
+{% endblock %}
+
+{% block top %} 
+<a  href="{%url 'OTSapp:home'%}" style="color:red;">Home</a>
+<br>
+<br>
+<a href="{%url 'OTSapp:logout'%}" style="color:green;">Login</a>
+{%endblock%}
+
+{% block content %}
+<Table border="2px">
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Attempt</th>
+        <th>right</th>
+        <th>wrong</th>
+        <th>points</th>
+    </tr>
+    {% for r in result%}
+    <tr>
+        <td>{{r.date}}</td>
+        <td>{{r.time}}</td>
+        <td>{{r.attempt}}</td>
+        <td>{{r.right}}</td>
+        <td>{{r.wrong}}</td>
+        <td>{{r.points}}</td>
+
+    </tr>
+    {% endfor %}
+
+</Table>
+{%endblock%}
+ 
+ 

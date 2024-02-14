@@ -1,0 +1,1 @@
+print(len(candidate[0].name ))
